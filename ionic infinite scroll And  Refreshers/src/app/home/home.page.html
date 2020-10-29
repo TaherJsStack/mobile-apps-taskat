@@ -1,0 +1,49 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      infinite scroll && Refreshers
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content
+      pullingIcon="chevron-down-circle-outline"
+      pullingText="Pull to refresh"
+      refreshingSpinner="circles"
+      refreshingText="Refreshing...">
+    </ion-refresher-content>
+  </ion-refresher>
+
+  <ion-list>
+    <ion-list-header>
+      <ion-label> All Posts Length 5000 </ion-label>
+    </ion-list-header>
+    
+    <ion-item *ngFor="let post of postsData">
+      <ion-avatar slot="start">
+        <img [src]="post.thumbnailUrl">
+      </ion-avatar>
+      <ion-label>
+        <ion-text>
+          <h2>{{post.title}}</h2>
+          <p>{{post.url}}</p>
+        </ion-text>
+        <ion-text color="medium">
+          <p>id: {{post.id}}, albumId: {{post.albumId}}</p>
+        </ion-text>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+  <ion-infinite-scroll threshold="100px" (ionInfinite)="doInfinite($event)">
+    <ion-infinite-scroll-content
+      loadingSpinner="bubbles"
+      loadingText="Loading more data...">
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+
+</ion-content>
+
