@@ -1,0 +1,29 @@
+ion-toolbar{
+    --background:  transparent !important
+}
+
+.backgeound-img{
+    background-color: aqua;
+    background-image: url('https://image.freepik.com/free-photo/stone-board-empty-table-front-blurred-background-perspective-brown-stone-blur-coffee-shop-can-be-used-display-montage-mock-up-your-products-vintage-filtered-image_1253-1452.jpg');
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
+    position: fixed;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+ion-row img{
+    width: 50%;
+}
+ion-col{
+    --background: red;
+    // background-color: #f5f2f254;
+    color: #000;
+    margin-bottom: 1.5px;
+    text-shadow: 0px 1px 4px #a3bee2;
+}

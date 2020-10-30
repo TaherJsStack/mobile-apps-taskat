@@ -1,0 +1,43 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tabs/tabs/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>cart</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content padding>
+
+    <ion-list>
+      <ion-item-sliding *ngFor="let product of items">
+
+        <ion-item-options>
+          <button>
+            <ion-icon name="trach"></ion-icon>
+            Delete
+          </button>
+        </ion-item-options>
+      </ion-item-sliding>
+    </ion-list>
+    <br>
+
+  
+    <ion-grid *ngIf="items.length <= 0">
+      <ion-row>
+          <h1 text-center >Your Cat's Empty <ion-icon name="appstore"></ion-icon></h1>
+          <h3 text-center> Choose a product from <ion-button expand="full" shape="round" fill="outline" [routerLink]="['/', 'tabs', 'tabs', 'home']"> here </ion-button > </h3>        
+      </ion-row>
+    </ion-grid>
+  
+  </ion-content>
+
+  <ion-footer text-center *ngIf="items.length > 0">
+    <!-- <h1  *ngFor="let product of items">   {{ product.priceDisc *  product.clientItems }}  </h1> -->
+    <ion-item >
+      <ion-button (click)="onSendOrder()">
+          <ion-label> Send Order </ion-label>
+      </ion-button>
+    </ion-item>
+
+</ion-footer>

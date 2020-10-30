@@ -1,0 +1,14 @@
+page-cart {
+    .list-md ion-item-sliding {
+        background-color: #9e1515;
+        margin-bottom: 8px;
+    }
+
+    ion-item-sliding ion-item span{
+        position: absolute;
+        right: 15px;
+        color: #f53d3d;
+    }
+
+
+}

@@ -1,0 +1,7 @@
+{
+  "name": "MoviesInc",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

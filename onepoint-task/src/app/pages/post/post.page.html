@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="end">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title *ngIf="!post">post</ion-title>
+    <ion-title *ngIf="post">post user Id:  {{ post?.userId }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div class="spinner" *ngIf="spinner">
+    <ion-spinner name="crescent"></ion-spinner>
+  </div>
+
+  <ion-card *ngIf="!spinner">
+    <ion-card-header class="ion-text-center">
+      <ion-card-subtitle> Post Id: {{ post?.id }}</ion-card-subtitle>
+      <ion-card-title>{{ post?.title }}</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>{{ post?.body }}</ion-card-content>
+  </ion-card>
+  
+
+
+</ion-content>

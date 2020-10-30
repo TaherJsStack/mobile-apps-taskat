@@ -1,0 +1,39 @@
+ion-content{
+  --background: #fff url('https://image.freepik.com/free-photo/abstract-blur-bokeh-defocused-shopping-mall-interior-department-store_1203-9462.jpg') no-repeat center center / cover;
+  padding: 160px 140px;
+
+  ion-grid{
+    margin-top: 37%;
+  }
+  .user-img{
+    width: 226px;
+    float: right;
+    height: 203px;
+  }
+  ion-avatar{
+    border: 3px solid #bfbfbf;
+    width: 100%;
+    height: 100%;
+    box-shadow: -9px 9px 63px 6px grey;
+  }
+
+  ion-list{
+    --background: transparent !important;
+  }
+
+  .list-md{
+    background: var(--ion-item-background,var(--ion-background-color,rgba(255, 255, 255, 0.068)))
+  }
+  ion-item{
+    --background: transparent !important;
+    --width: 300px;
+    --margin: auto;
+  }
+
+  ion-list ion-item ion-label p{
+    min-width: 100px;
+    width: 100px;
+    float: left;
+  }
+
+}

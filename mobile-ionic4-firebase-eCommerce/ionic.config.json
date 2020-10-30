@@ -1,0 +1,7 @@
+{
+  "name": "gg",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

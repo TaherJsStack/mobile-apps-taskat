@@ -1,0 +1,56 @@
+
+ion-card{
+    width: 325px;
+    margin: 13px auto;
+}
+ion-card ion-card-header{
+    font-weight: 700;
+    color: #000;
+}
+ion-card img{
+    max-width: 100px;
+}
+
+ion-content .card-md h3{
+    font-weight: 800;
+}
+
+ion-content .card-md span.price{
+    text-decoration: line-through;
+}
+
+ion-content ion-card-content{
+    margin-bottom: -20px;
+}
+ion-content ion-card-content ion-col h6{
+    position: absolute;
+    left: -154px;
+    top: -25px;
+    background-color: #f78f1e;
+    color: #fff;
+    padding: 4px;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.card-header-md {
+    font-size: 1.6rem;
+    color: #222;
+    padding: 16px;
+    font-weight: 600;
+}
+.card-content-md{
+    padding-bottom: 0
+}
+.card-md h6{
+    color: #fff
+}
+
+p.description{
+    color: grey;
+    height: 23px;
+    overflow: hidden;
+}
+
+
+

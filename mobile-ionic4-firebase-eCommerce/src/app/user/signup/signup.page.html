@@ -1,0 +1,50 @@
+<ion-content padding>
+  <h4 text-center>Signup</h4>
+    <form (ngSubmit)="onSignUp(user)" #user="ngForm" >
+  
+        <ion-list>
+
+
+          <ion-item>
+            <ion-label color="primary" position="floating">
+              <ion-icon name="lock"></ion-icon>
+              Confirm pass</ion-label>
+            <ion-input
+              type="password"
+              required
+              ngModel
+              password
+              [minlength]="6"
+              #pass2="ngModel"
+              name="confpassword"></ion-input>
+          </ion-item>
+          <p *ngIf="pass2.touched && pass2.value != pass.value">password doesn't match</p>
+  
+        </ion-list>
+
+        <ion-row>
+          <ion-col col-50>
+            <ion-button
+              color="danger"
+              class="signin"
+              type="button"
+              expand="block"
+              (click)="onBack()"
+              >Back</ion-button>
+          </ion-col>
+          <ion-col col-50>
+            <ion-button
+              color="primary"
+              class="signup"
+              type="submit"
+              expand="block"
+              [disabled]="!user.valid">Get Started</ion-button>
+          </ion-col>
+        </ion-row>
+    <ion-button size="small" color="primary" (click)="onTerms()">Terms  >></ion-button>
+
+    </form>
+  
+  
+  </ion-content>
+  

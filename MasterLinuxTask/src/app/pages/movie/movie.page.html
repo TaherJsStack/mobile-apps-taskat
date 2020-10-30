@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-toolbar>
+
+    <ion-buttons slot="start">
+      <ion-back-button [defaultHref]="['/tabs/movieList', listId, listMovie ]"></ion-back-button>
+
+    </ion-buttons>
+
+    <ion-title>{{movieName}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card>
+
+
+      <img src="{{ movie?.poster_path == null ? 'assets/default.jpg' : 'movie?.poster_path' }}"/>
+      <ion-card-header>
+        <!-- <span>{{movie.release_date}}</span> -->
+        <ion-card-subtitle>{{ movie?.original_title }}</ion-card-subtitle>
+        <ion-card-title>{{ movie?.original_title }}</ion-card-title>
+      </ion-card-header>
+    
+      <ion-card-content>
+        {{ movie?.overview }}
+        This is content, without any paragraph or header tags,
+        within an ion-card-content element.
+      </ion-card-content>
+
+      <ul>
+        <li><p> title</p>        {{ movie?.title }}   </li>
+        <li><p> video</p>        {{ movie?.video }}   </li>
+        <li><p> adult </p>       {{ movie?.adult }}   </li>
+        <li><p> budget </p>      {{ movie?.budget }}  </li>
+        <li><p> revenue</p>      {{ movie?.revenue }} </li>
+        <li><p> runtime</p>      {{ movie?.runtime }} </li>
+        <li><p> status</p>       {{ movie?.status }}  </li>
+        <li><p> tagline</p>      {{ movie?.tagline }} </li>
+        <li><p> popularity</p>   {{ movie?.popularity }}   </li>
+        <li><p> release_date</p> {{ movie?.release_date }} </li>
+        <li><p> original_language</p> {{ movie?.original_language }} </li>
+      </ul>
+
+    
+  </ion-card>
+
+
+</ion-content>
+<!-- https://i.pinimg.com/400x300/f0/52/c0/f052c05930a1e336b0ead1c71f476b99.jpg -->
+<!--[routerLink]="['/tabs/movie?List', movie?.id, movie?.name]"  -->

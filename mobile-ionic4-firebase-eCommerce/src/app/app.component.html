@@ -1,0 +1,50 @@
+<ion-app>
+  <ion-split-pane>
+   
+    <ion-menu menuId="main" class="my-custom-menu">
+      <ion-header *ngIf="userData" >
+        <div class="user-img">
+          <!-- <img src="http://icons.iconarchive.com/icons/paomedia/small-n-flat/512/user-male-icon.png"> -->
+          <img src="{{ userData.photoURL }}">
+        </div>
+        <div class="user-name"> {{ userData.name }} </div>
+      </ion-header>
+      <ion-header *ngIf="!userData" >
+        <div class="user-img">
+          <img src="http://icons.iconarchive.com/icons/paomedia/small-n-flat/512/user-male-icon.png">
+        </div>
+        <div class="user-name"> displayName </div>
+      </ion-header>
+      <ion-content>
+        
+        <ion-list>
+          <ion-menu-toggle auto-hide='true' *ngFor="let category of categories">
+            <!-- <ion-item [routerDirection]="'root'" [routerLink]="[category.url]"> -->
+              <ion-item [routerLink]="[ '/','tabs', 'tabs', 'products', 'products', category.name]">
+              <ion-icon slot="start" color="medium" name="{{ category.icon }}"></ion-icon>
+              <ion-label>{{ category.name  | uppercase }}</ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+
+        </ion-list>
+
+
+      </ion-content>
+
+      <ion-footer>
+        <ion-menu-toggle line="none">
+          <!-- <ion-item> -->
+            <ion-button *ngIf="userData"  expand="full" (click)="onLogout()">logout</ion-button>
+          <!-- </ion-item>
+          <ion-item> -->
+            <ion-button *ngIf="!userData"  expand="full" [routerLink]="[ '/','signin']">login</ion-button>
+          <!-- </ion-item> -->
+        </ion-menu-toggle>
+      </ion-footer>
+
+    </ion-menu>
+
+    <ion-router-outlet main></ion-router-outlet>
+  </ion-split-pane>
+      
+</ion-app>

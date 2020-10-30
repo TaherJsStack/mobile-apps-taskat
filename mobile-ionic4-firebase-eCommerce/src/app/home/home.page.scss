@@ -1,0 +1,165 @@
+ion-header{
+    background-color: #f8f8f8
+  }
+  ion-icon{
+    color: #f7a043;
+  
+  }
+  ion-slides.MainSlid{
+    display: block;
+    width: 100%;
+    height: 95%;
+    background-image:url(https://firebasestorage.googleapis.com/v0/b/admin-panel-firebase.appspot.com/o/ionic-app-img%2Fbackground%2Fhome.png?alt=media&token=ebd31add-c641-4502-bfe6-9cb52af5a209);
+    background-position: 72%;
+    background-size: 238%;
+    background-repeat: no-repeat;
+  }
+  // .MainSlid div.margin-top{
+  //   margin-top: 60px
+  // }
+  ion-slides h2{
+    color: #656565;
+    width: 253px;
+    height: 94px;
+    position: absolute;
+    left: -4px;
+    top: 94px;
+    font-size: 30px;
+    font-variant-caps: all-petite-caps;
+    font-variant: all-petite-caps;
+    font-weight: bolder;
+    text-shadow: 0px 0px 5px #fff;
+  }
+  ion-slides .slider-content{
+    // background-image: url(https://firebasestorage.googleapis.com/v0/b/ionictestcrud.appspot.com/o/ionic4-market%2Fbackground%2Fhome2.png?alt=media&token=8ccfcc64-08fc-4f73-98de-cd53ed0798ee);
+    background-position: center;
+    background-size: 103%;
+    background-repeat: no-repeat;
+    width: 235px;
+    height: 143px;
+    position: absolute;
+    top: 206px;
+    left: 18px;
+    padding: 10px;
+    box-shadow: 8px 14px 0px -1px #a59f9f;
+  }
+
+  ion-slides .slider-content.slid1 {
+    background-image: url(https://firebasestorage.googleapis.com/v0/b/ionictestcrud.appspot.com/o/ionic4-market%2Fbackground%2Fhome2.png?alt=media&token=8ccfcc64-08fc-4f73-98de-cd53ed0798ee);
+  }
+  ion-slides .slider-content.slid2{
+    background-image: url(https://images.techhive.com/images/article/2014/10/nike-hints-apples-wearable-plans-go-beyond-apple-watch-100526534-primary.idge.jpg);
+  }
+  ion-slides .slider-content.slid3{
+    background-image: url(https://static.acer.com/up/Resource/Acer/Series_Landing/20180607/New_product_Swift_5_1920.jpg);
+  }
+  ion-slide{
+    margin-top: 70px
+  }
+  h3{
+    color: darkgray;
+    top: 145px;
+    position: absolute;
+  }
+  
+  ion-content div.f-category i{
+    position: absolute;
+    top: 22px;
+    right: 25px;
+    color: #f78f1e;
+  }
+  
+  
+  div.strip{
+    height: 150px;
+    background-image: url(https://firebasestorage.googleapis.com/v0/b/ionictestcrud.appspot.com/o/ionic4-market%2Fbackground%2Fhome2.png?alt=media&token=8ccfcc64-08fc-4f73-98de-cd53ed0798ee);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center -30.6px;
+    background-position: 77% 84%;
+    background-size: 245%;
+    background-repeat: no-repeat;
+  }
+  
+  .grid{
+    position: relative;
+    top: -40px;
+  }
+  
+  div.strip h3{
+    line-height: 92px;
+    color: #516876;
+    text-shadow: 0px 2px 1px #000;
+    font-size: 35px;
+  }
+  ion-card-title ion-icon{
+    font-size: 66px;
+    text-align: center;
+    display: block;
+    margin: auto;
+  }
+//////////////
+  ion-grid ion-card img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+  ion-grid ion-card-title{
+    margin-top: 17px;
+    font-size: 17px;
+    color: #eea74e;
+    text-shadow: 0px 1px 1px #f3fffe;
+    font-weight: bold;
+  }
+  ion-card ion-item{
+    --background: transparent !important;
+  }
+
+  .card-md .card-header-md {
+    display: inline-block;
+    font-size: 3.2em;
+    text-shadow: 0px 2px 1px #000;
+  }
+  
+  ion-card.product{
+    width: 274px;
+  }
+  ion-card.product img{
+    margin: auto
+  }
+// \\\\\\\\\\\\\\\\\\\\\\\
+  ion-grid.background{
+    background-image: url('https://image.freepik.com/free-photo/abstract-blur-shopping-mall-retail-store_1203-8724.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding: 99px 17px;
+  }
+
+
+  ion-grid.background ion-card{
+    background-color: #fff
+  }
+
+  ion-grid ion-col h6.category-name{
+    font-size: 15px;
+    font-weight: bold;
+    color: #f78f1e
+  }
+  ion-grid ion-col p.category-length{
+  color: #8a8a8a;
+  }
+
+  .toolbar-background{
+    --border-width: 0px !important;
+    border: 0 !important;
+    --background: #000;
+    background: #000;
+}
+
+  .swiper-pagination-bullet-active{
+    --background: transparent !important;
+    background-color: transparent !important
+  }

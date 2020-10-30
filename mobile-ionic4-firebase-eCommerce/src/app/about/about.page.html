@@ -1,0 +1,232 @@
+<ion-content>
+
+    <!-- Segment in a toolbar -->
+    <ion-toolbar>
+        <ion-segment (ionChange)="segmentChanged($event)">
+
+            <ion-segment-button value="map">
+                <ion-icon name="pin"></ion-icon>
+            </ion-segment-button>
+
+            <ion-segment-button value="address">
+                <ion-icon name="bookmark"></ion-icon>
+            </ion-segment-button>
+
+            <ion-segment-button value="owner">
+                <i class="fa fa-user-secret fa-2x"></i>
+                <!-- <ion-icon name="bookmark"></ion-icon> -->
+                <ion-icon name="locate"></ion-icon>
+            </ion-segment-button>
+
+        </ion-segment>
+    </ion-toolbar>
+
+
+    <section *ngIf="segmentValue === 'map'">
+        <!-- <p>event detail value map {{ segmentValue }}</p>   -->
+        <div #map id="map"></div>
+        <div> <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d5810.902172602858!2d31.185694081609707!3d30.00289833225293!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2seg!4v1554457226999!5m2!1sen!2seg" frameborder="0" style="border:0; width: 100%; height: 500px;"
+                allowfullscreen></iframe> </div>
+    </section>
+
+    <!-- ============================= address ==================================================== -->
+    <section *ngIf="segmentValue === 'address'" class="address">
+        <!-- <p>event detail value {{ segmentValue }}</p>   -->
+        <br><br>
+        <ion-card>
+            <ion-row>
+                <ion-col size="2" no-padding>
+                    <div class="branch-name">
+                        <h3> Dokki </h3>
+                    </div>
+                </ion-col>
+                <ion-col size="10" no-padding>
+                    <div class="branch-detali">
+                        <h5>
+                            <ion-icon name="pin"></ion-icon> 49 Amaan Street , Mosadaq , Dokki - Cairo - Egypt.
+                        </h5>
+                        <ion-grid>
+                            <ion-row>
+                                <ion-col size="6" no-padding>
+                                    <i class="fa fa-phone" aria-hidden="true"></i> 011 55 72 14 25
+                                </ion-col>
+                                <ion-col size="6" no-padding>
+                                    <i class="fa fa-fax" aria-hidden="true"></i> 00 0000 0000
+                                </ion-col>
+                            </ion-row>
+                        </ion-grid>
+                    </div>
+                </ion-col>
+            </ion-row>
+        </ion-card>
+
+        <ion-card>
+            <ion-row>
+                <ion-col size="2" no-padding>
+                    <div class="branch-name">
+                        <h3>Haram</h3>
+                    </div>
+                </ion-col>
+                <ion-col size="10" no-padding>
+                    <div class="branch-detali">
+                        <h5>
+                            <ion-icon name="pin"></ion-icon> 49 Amaan Street , Mosadaq , Dokki - Cairo - Egypt.
+                        </h5>
+                        <ion-grid>
+                            <ion-row>
+                                <ion-col size="6" no-padding>
+                                    <i class="fa fa-phone" aria-hidden="true"></i> 011 55 72 14 25
+                                </ion-col>
+                                <ion-col size="6" no-padding>
+                                    <i class="fa fa-fax" aria-hidden="true"></i> 00 0000 0000
+                                </ion-col>
+                            </ion-row>
+                        </ion-grid>
+                    </div>
+                </ion-col>
+            </ion-row>
+        </ion-card>
+
+        <ion-card>
+            <ion-row>
+                <ion-col size="2" no-padding>
+                    <div class="branch-name">
+                        <h3>october</h3>
+                    </div>
+                </ion-col>
+                <ion-col size="10" no-padding>
+                    <div class="branch-detali">
+                        <h5>
+                            <ion-icon name="pin"></ion-icon> 49 Amaan Street , Mosadaq , Dokki - Cairo - Egypt.
+                        </h5>
+                        <ion-grid>
+                            <ion-row>
+                                <ion-col size="6" no-padding>
+                                    <i class="fa fa-phone" aria-hidden="true"></i> 011 55 72 14 25
+                                </ion-col>
+                                <ion-col size="6" no-padding>
+                                    <i class="fa fa-fax" aria-hidden="true"></i> 00 0000 0000
+                                </ion-col>
+                            </ion-row>
+                        </ion-grid>
+                    </div>
+                </ion-col>
+            </ion-row>
+        </ion-card>
+
+        <ion-card>
+            <ion-row>
+                <ion-col size="2" no-padding>
+                    <div class="branch-name">
+                        <h3>Giza</h3>
+                    </div>
+                </ion-col>
+                <ion-col size="10" no-padding>
+                    <div class="branch-detali">
+                        <h5>
+                            <ion-icon name="pin"></ion-icon> 49 Amaan Street , Mosadaq , Dokki - Cairo - Egypt.
+                        </h5>
+                        <ion-grid>
+                            <ion-row>
+                                <ion-col size="6" no-padding>
+                                    <i class="fa fa-phone" aria-hidden="true"></i> 011 55 72 14 25
+                                </ion-col>
+                                <ion-col size="6" no-padding>
+                                    <i class="fa fa-fax" aria-hidden="true"></i> 00 0000 0000
+                                </ion-col>
+                            </ion-row>
+                        </ion-grid>
+                    </div>
+                </ion-col>
+            </ion-row>
+        </ion-card>
+
+    </section>
+    <!-- ================================================================================= -->
+    <!-- =============================  owner  ==================================================== -->
+    <section *ngIf="segmentValue === 'owner'" class="owner">
+        <br> <br>
+        <ion-card>
+            <ion-row>
+                <ion-col size="2" no-padding>
+                    <div class="branch-name">
+                        <h3>idea</h3>
+                    </div>
+                </ion-col>
+                <ion-col size="10" no-padding>
+                    <div class="branch-detali">
+                        <h5>
+                            this app create by
+                            <strong> <ion-icon name="logo-ionic"></ion-icon>Ionic 4</strong> and <strong>firebase</strong> for testing really shopping app <br /> feed data from admin panel created by
+                            <strong> <ion-icon name="logo-angular"></ion-icon>angular6</strong> and <strong>firebase</strong> </h5>
+                    </div>
+                </ion-col>
+            </ion-row>
+        </ion-card>
+
+        <ion-card>
+            <ion-row>
+                <ion-col size="2" no-padding>
+                    <div class="branch-name">
+                        <h3>for view</h3>
+                    </div>
+                </ion-col>
+                <ion-col size="10" no-padding>
+                    <div class="branch-detali">
+                        <h5>
+                            that thing create for gust only view
+                        </h5>
+                        <ul>
+                            <li>2</li>
+                            <li>2</li>
+                            <li>2</li>
+                            <li>2</li>
+                        </ul>
+                    </div>
+                </ion-col>
+            </ion-row>
+        </ion-card>
+
+
+        <ion-card>
+            <ion-row>
+                <ion-col size="2" no-padding>
+                    <div class="branch-name">
+                        <h3>developer</h3>
+                    </div>
+                </ion-col>
+                <ion-col size="10" no-padding>
+                    <div class="branch-detali">
+                        <h5>
+                            this is me: Taher Ahmed <br> <strong> MEAN stack && Ionic Developer </strong>
+                        </h5>
+                        <p>Find Me on:</p>
+                        <ion-buttons>
+                            <ion-button href="https://www.facebook.com/profile.php?id=100022406803728">
+                                <ion-icon name="logo-facebook" size="large"></ion-icon>
+                            </ion-button>
+
+                            <ion-button href="https://twitter.com/Taher69634056">
+                                <ion-icon name="logo-twitter" size="large"></ion-icon>
+                            </ion-button>
+
+                            <ion-button href="https://www.linkedin.com/in/taher-ahmed-73b29a173/">
+                                <ion-icon name="logo-linkedin" size="large"></ion-icon>
+                            </ion-button>
+
+                            <ion-button download href="https://doc-0g-34-docs.googleusercontent.com/docs/securesc/6sdg8b5sp5fhav5pju3lbc31efshsjng/j7l6lh0kpdsn1s6mgal7j80iu05rs5gb/1554480000000/14242659968180525581/14242659968180525581/1dif2l55pLtDfKC9iNDnyncWfBsPKJXlb?e=download&nonce=to1rihf4fpsks&user=14242659968180525581&hash=jqbkb9n7ug1spatbj0br3nran7mdm5p3">
+                                <ion-icon name="code-download" size="large"></ion-icon>
+                            </ion-button>
+
+                        </ion-buttons>
+
+                    </div>
+                </ion-col>
+            </ion-row>
+        </ion-card>
+
+    </section>
+
+
+
+</ion-content>

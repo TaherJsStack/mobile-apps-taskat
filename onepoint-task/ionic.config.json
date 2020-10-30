@@ -1,0 +1,7 @@
+{
+  "name": "onepoint-task",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

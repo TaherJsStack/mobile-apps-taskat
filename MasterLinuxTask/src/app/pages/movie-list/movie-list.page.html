@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tabs/moviesList"></ion-back-button>
+    </ion-buttons>
+
+    <ion-title>{{ movieName }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  
+<ion-card *ngFor="let movies of movieList" [routerLink]="['/tabs/movie', movies.id, movies.name, listId, listName]">
+
+  <img src="{{ movies.poster_path == null ? 'assets/default.jpg' : 'movies.poster_path' }}"/>
+  <ion-card-header>
+    <ion-card-subtitle>{{ movies.list_type }}</ion-card-subtitle>
+    <ion-card-title>{{ movies.name }}</ion-card-title>
+  </ion-card-header>
+
+  <ion-card-content>
+    {{ movies.description }}
+    This is content, without any paragraph or header tags,
+    within an ion-card-content element.
+  </ion-card-content>
+</ion-card>
+
+<!-- https://i.pinimg.com/400x300/f0/52/c0/f052c05930a1e336b0ead1c71f476b99.jpg -->
+</ion-content>

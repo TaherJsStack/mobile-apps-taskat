@@ -1,0 +1,48 @@
+<ion-content padding>
+    <!-- </div> -->
+    <!-- logo icon -->
+    <ion-row>
+        <ion-col class="logo">
+            <img src="https://firebasestorage.googleapis.com/v0/b/ionictestcrud.appspot.com/o/ionic4-market%2Flogo2.png?alt=media&token=4583f5d6-6385-4e9b-9e72-7d2beca09dbd">
+        </ion-col>
+    </ion-row>
+
+    <!-- login form -->
+    <form (ngSubmit)="onSignin(user)" #user="ngForm">
+        <!-- Email input -->
+        <ion-item>
+            <ion-label color="primary" position="floating">
+                <ion-icon name="person"></ion-icon>Email</ion-label>
+            <ion-input ngModel clearInput name="email" type="email" color="primary" class="text-input" required></ion-input>
+        </ion-item>
+        <!-- password Input -->
+        <ion-item>
+            <ion-label color="primary" position="floating"><i class="fa fa-lock"></i> Password</ion-label>
+            <ion-input type="password" clearInput ngModel name="password" required></ion-input>
+        </ion-item>
+
+        <!-- forget button -->
+        <ion-button size="small" clear class="forget" color="primary" (click)="onForgetPassword()">Forget Password >></ion-button>
+
+        <!-- buttons to login or regester or skip -->
+        <ion-row text-center class="buttons">
+            <ion-col col-30>
+                <button ion-button class="skip" [routerLink]="[ '/', 'tabs', 'tabs', 'home' ]">
+                <i class="fa fa-angle-left"></i> < Skip</button>
+            </ion-col>
+            <ion-col col-30>
+                <button type="submit" ion-button class="login" [disabled]="!user.valid"> SignIn </button>
+            </ion-col>
+            <ion-col col-30>
+                <button ion-button class="register" [routerLink]="[ '/','signup']"> SignUp > <i class="fa fa-angle-right"></i></button>
+            </ion-col>
+        </ion-row>
+    </form>
+
+    <ion-row class="media" text-center>
+        <ion-col col-30><button ion-button> <ion-icon name="logo-twitter"></ion-icon> </button></ion-col>
+        <ion-col col-30><button ion-button> <ion-icon name="logo-facebook"></ion-icon></button></ion-col>
+        <ion-col col-30><button ion-button> <ion-icon name="logo-googleplus"></ion-icon></button></ion-col>
+    </ion-row>
+    <!-- <div> -->
+</ion-content>

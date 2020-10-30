@@ -1,0 +1,104 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tabs/hame"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content class="ion-content" padding>
+
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-back-button defaultHref="/tabs/hame"></ion-back-button>
+      </ion-buttons>
+    </ion-toolbar>
+    
+  <div class="backgeound-img">
+  </div>
+
+  <ion-row>
+    <ion-col> 
+        <img src="{{ product.image }}" alt=""> 
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col size="4"> name </ion-col>
+    <ion-col size="8"> {{ product.name }} </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col size="4"> price </ion-col>
+    <ion-col size="8"> {{ product.price | currency:'USD':true }} </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col size="4"> discount </ion-col>
+    <ion-col size="8"> {{ product.discount | currency:'USD':true }} </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col size="4"> price after discount </ion-col>
+    <ion-col size="8"> {{ product.priceDisc | currency:'USD':true }} </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col size="4"> category </ion-col>
+    <ion-col size="8"> {{ product.category }} </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col size="4"> added Date </ion-col>
+    <ion-col size="8"> {{ product.addedDate | date }} </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col size="4"> Add By </ion-col>
+    <ion-col size="8"> {{ product.creator }} </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col size="4"> description </ion-col>
+    <ion-col size="8"> {{ product.description }} </ion-col>
+  </ion-row>
+
+  <ion-list>
+
+    <ion-item lines="none">
+        <ion-buttons slot="start" [routerLink]="['/', 'tabs', 'tabs', 'cart']" >
+          <ion-button>
+            <ion-badge color="primary" *ngIf="cart.length > 0">{{ cart.length }}</ion-badge>
+            <ion-icon slot="icon-only" name="cart" size="large"  color="primary"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+
+        <ion-buttons slot="end" color="primary">
+          <ion-button 
+          fill="outline" 
+          size="small"
+          color="primary"
+          (click)="addToCart(product)"
+          *ngIf="!isBought(product)" > Add To Cart</ion-button>
+          <div *ngIf="isBought(product)"  color="primary">
+              <!-- <ion-button color="danger"> Remove</ion-button> -->
+              <ion-button 
+                (click)="onRemove(product, product.id)" 
+                size="small"
+                color="primary"><ion-icon name="remove"></ion-icon> </ion-button>
+                <span *ngIf="product.clientItems > 0"> {{ product.clientItems }} </span>
+              <ion-button 
+                (click)="onAdd(product)" 
+                size="small"
+                color="primary"><ion-icon name="add"></ion-icon> </ion-button>
+          </div>
+        </ion-buttons>
+          
+    </ion-item>
+
+    
+  </ion-list>
+
+
+    <!-- <h1> {{ product.name }} </h1> -->
+
+
+<!-- <ion-button (click)="onProductInfo()">
+  Modal
+</ion-button> -->
+
+  <!-- <h1>{{ product.name }}</h1> -->
+
+</ion-content>

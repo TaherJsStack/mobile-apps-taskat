@@ -1,0 +1,25 @@
+    ion-content{
+      --background: #fff url('../../../assets/img/background/signin.png') no-repeat center center / cover;
+      --color: #fff
+    }
+      
+
+  ion-item{
+    --background: transparent !important;
+    --color: #000
+  }
+  .list-md{
+    // background-color: transparent;
+    background-color: #9c9a9850;
+    padding: 18px 25px;
+  }
+  form{
+    width: 300px;
+    margin: auto;
+    background-color: #8684824b;
+    padding: 5px 6px;
+  }
+  p{
+    margin: 0;
+    --color: red
+  }

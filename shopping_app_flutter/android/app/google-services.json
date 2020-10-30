@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "497011809857",
+    "firebase_url": "https://mall-shop.firebaseio.com",
+    "project_id": "mall-shop",
+    "storage_bucket": "mall-shop.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:497011809857:android:0ddc27bb22c9539e37b0c0",
+        "android_client_info": {
+          "package_name": "com.example.flutterapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "497011809857-jbd8db6pmhgnvbhbntoa5256u2eclbnq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDY5R3uypUVHS8jfkRTXbQuMqthF7vBbkk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "497011809857-jbd8db6pmhgnvbhbntoa5256u2eclbnq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

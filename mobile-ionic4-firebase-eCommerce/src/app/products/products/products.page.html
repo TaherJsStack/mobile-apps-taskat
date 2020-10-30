@@ -1,0 +1,74 @@
+<ion-header>
+  <ion-toolbar>
+
+    <ion-buttons slot="start">
+      <ion-button>
+        <ion-menu-button slot="icon-only" menu="main" name="menu">
+        </ion-menu-button>
+      </ion-button>
+    </ion-buttons>
+
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title> {{ categoryname }} </ion-title>
+
+    <ion-buttons slot="end" [routerLink]="['/', 'tabs', 'tabs', 'cart']" >
+    <ion-button>
+        <ion-badge color="primary" *ngIf="cart.length > 0">{{ cart.length }}</ion-badge>
+      <ion-icon slot="icon-only" name="cart" size="large"  color="secondary"></ion-icon>
+    </ion-button>
+  </ion-buttons>
+  
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+
+  <ion-card *ngFor="let product of filterdProducts">
+    <ion-card-header text-center>
+      {{ product.name | uppercase }}
+    </ion-card-header>
+    <ion-card-content>
+      <ion-row>
+        <ion-col col-6>
+          <img src="{{product.image}}" item-left>
+        </ion-col>
+        <ion-col col-6>
+          <h3>discount is: {{ product.discount | currency:"USD": true }}</h3>
+          <p class="description">description: {{ product.description }}</p>
+          <span class="price">price: {{ product.priceDisc }} $</span>
+          <h6>Sale: {{ product.priceDisc }}$</h6>
+        </ion-col>
+      </ion-row>
+  
+  
+      </ion-card-content>
+      <ion-row>
+        <ion-col text-right>
+          <ion-button 
+            text-left
+            [routerLink]="['/', 'tabs', 'tabs', 'products', 'product', product.$key]"
+            fill="outline" 
+            size="small"
+            >
+            More
+          </ion-button>
+          <ion-button 
+            fill="outline" 
+            size="small"
+            (click)="addToCart(product)"
+            *ngIf="!isBought(product)"> Add To Cart</ion-button>
+          <span *ngIf="isBought(product)">
+            <ion-button (click)="onRemove(product, product.id)" size="small"><ion-icon name="remove"></ion-icon> </ion-button>
+             <span *ngIf="product.clientItems > 0"> {{ product.clientItems }} </span>
+            <ion-button (click)="onAdd(product)" size="small"><ion-icon name="add"></ion-icon> </ion-button>
+          </span>
+  
+        </ion-col>
+      </ion-row>
+    </ion-card>
+  
+
+</ion-content>
