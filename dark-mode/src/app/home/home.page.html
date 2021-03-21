@@ -1,0 +1,31 @@
+
+<ion-content [fullscreen]="true">
+
+  <div id="date-time">
+    {{ day }}
+    <hr>
+    {{ month }}
+  </div>
+
+  <div id="container">
+    <ion-toggle (ionChange)="onClick($event)"></ion-toggle>
+  </div>
+
+
+  <div  id="footer">
+    <div class="footer-text">
+      lorem<br> ipsum dolor<br> sit amet, consect
+      <hr>
+      <div class="author">
+        <strong>T</strong>aher: +20 01155721425
+      </div>
+    </div>
+    <div class="footer-icons-tab">
+      <ion-icon name="heart-half"></ion-icon>
+      <ion-icon name="finger-print"></ion-icon>
+      <ion-icon name="brush"></ion-icon>
+      <ion-icon name="cube"></ion-icon>
+    </div>
+  </div>
+
+</ion-content>
